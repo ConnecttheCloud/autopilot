@@ -1,0 +1,5 @@
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+Install-Script -Name Get-WindowsAutopilotInfo -Force
+Get-InstalledScript -Name Get-WindowsAutopilotInfo | Select-Object -Property InstalledLocation
+C:\'Program Files'\WindowsPowerShell\Scripts\Get-WindowsAutoPilotInfo.ps1 -GroupTag "Lenovo" -Online
